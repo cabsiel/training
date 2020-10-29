@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { CameraPreview } from '@ionic-native/camera-preview/ngx';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
   providers: [
     StatusBar,
     SplashScreen,
+    CameraPreview,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
