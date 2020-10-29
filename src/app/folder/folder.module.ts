@@ -17,7 +17,10 @@ import { TranslateModule } from '@ngx-translate/core';
     TranslateModule,
     FolderPageRoutingModule
   ],
-  declarations: [FolderPage]
+  declarations: [FolderPage],
+  providers: [
+    CameraPreview
+  ]
 })
 export class FolderPageModule {}
 
