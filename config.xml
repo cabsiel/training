@@ -1,30 +1,24 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.training.ionic" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Training</name>
-    <description>Training</description>
-    <author email="eloy.cabezuelo@gmail.com" href="">Eloy Cabezuelo</author>
+<widget id="io.ionic.photogallery" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>MyApp</name>
+    <description>An awesome Ionic/Cordova app.</description>
+    <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
     <content src="index.html" />
-    <content original-src="index.html" />
-    <access launch-external="yes" origin="*" subdomains="true" />
-    <allow-navigation href="*" />
-    <preference name="AndroidLaunchMode" value="singleTask" />
+    <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
-    <allow-intent href="*.json" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-    <allow-intent href="gap:*" />
-    <preference name="android-minSdkVersion" value="24" />
-    <preference name="android-targetSdkVersion" value="28" />
-    <allow-intent href="*.firebaseio.com" />
-    <allow-intent href="auth.firebase.com" />
-    <access origin="*.firebaseio.com" />
-    <access origin="auth.firebase.com" />
-    <preference name="SplashScreenDelay" value="18000" />
-    <preference name="loadUrlTimeoutValue" value="700000" />
+    <preference name="ScrollEnabled" value="false" />
+    <preference name="android-minSdkVersion" value="19" />
+    <preference name="BackupWebStorage" value="none" />
+    <preference name="SplashMaintainAspectRatio" value="true" />
+    <preference name="FadeSplashScreenDuration" value="300" />
+    <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="3000" />
     <platform name="android">
         <allow-intent href="market:*" />
         <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
@@ -45,9 +39,6 @@
         <splash density="port-xhdpi" src="resources/android/splash/drawable-port-xhdpi-screen.png" />
         <splash density="port-xxhdpi" src="resources/android/splash/drawable-port-xxhdpi-screen.png" />
         <splash density="port-xxxhdpi" src="resources/android/splash/drawable-port-xxxhdpi-screen.png" />
-        <plugin name="cordova-android-support-gradle-release" spec="1.4.7">
-            <variable name="ANDROID_SUPPORT_VERSION" value="27.+" />
-        </plugin>
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
@@ -83,26 +74,19 @@
         <splash height="1024" src="resources/ios/splash/Default-Portrait~ipad.png" width="768" />
         <splash height="960" src="resources/ios/splash/Default@2x~iphone.png" width="640" />
         <splash height="480" src="resources/ios/splash/Default~iphone.png" width="320" />
-        <preference name="EnableViewportScale" value="true" />
-        <preference name="UIWebViewDecelerationSpeed" value="fast" />
-        <preference name="DisallowOverscroll" value="true" />
         <splash height="2732" src="resources/ios/splash/Default@2x~universal~anyany.png" width="2732" />
-        <edit-config file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription">
-            <string>Necesitamos acceder a tu ubicación para encontrar las tiendas cercanas a ti</string>
-        </edit-config>
-        <edit-config file="*-Info.plist" mode="merge" target="NSBluetoothAlwaysUsageDescription">
-            <string>Necesitamos acceder al bluetooth para darte una mejor localización</string>
-        </edit-config>
-        <edit-config file="*-Info.plist" mode="merge" target="NSCameraUsageDescription">
-            <string>Necesitamos acceder a la cámara para escanear códigos de barras</string>
-        </edit-config>
-        <edit-config file="*-Info.plist" mode="merge" target="NSMicrophoneUsageDescription">
-            <string>Necesitamos acceder al micrófono para permitir la búsqueda de productos</string>
-        </edit-config>
-        <edit-config file="*-Info.plist" mode="merge" target="CFBundleDevelopmentRegion">
-            <string>Catalan</string>
-        </edit-config>
     </platform>
-    <preference name="SplashShowOnlyFirstTime" value="false" />
+    <plugin name="cordova-plugin-whitelist" spec="1.3.3" />
+    <plugin name="cordova-plugin-statusbar" spec="2.4.2" />
+    <plugin name="cordova-plugin-device" spec="2.0.2" />
+    <plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
+    <plugin name="cordova-plugin-ionic-webview" spec="^2.0.0" />
+    <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
+    <edit-config file="*-Info.plist" mode="merge" target="NSCameraUsageDescription">
+        <string>Used to take pictures</string>
+    </edit-config>
+    <plugin name="cordova-sqlite-storage" spec="^2.5.1" />
+    <plugin name="cordova-plugin-camera" spec="~4.0.3" />
     <engine name="android" spec="7.1.4" />
+    <engine name="ios" spec="4.5.5" />
 </widget>

@@ -1,7 +1,7 @@
 {
-  "name": "RC Helper",
+  "name": "photo-rc1",
   "integrations": {
-    "capacitor": {}
+    "cordova": {}
   },
   "type": "angular"
 }
