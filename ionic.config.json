@@ -1,7 +1,7 @@
 {
   "name": "realHelper",
   "integrations": {
-    "capacitor": {}
+    "cordova": {}
   },
   "type": "angular"
 }
