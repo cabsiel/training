@@ -8,7 +8,6 @@ import { FolderPageRoutingModule } from './folder-routing.module';
 
 import { FolderPage } from './folder.page';
 import { TranslateModule } from '@ngx-translate/core';
-import { CameraPreview } from '@ionic-native/camera-preview/ngx';
 
 @NgModule({
   imports: [
@@ -18,10 +17,7 @@ import { CameraPreview } from '@ionic-native/camera-preview/ngx';
     TranslateModule,
     FolderPageRoutingModule
   ],
-  declarations: [FolderPage],
-  providers: [
-    CameraPreview
-  ]
+  declarations: [FolderPage]
 })
 export class FolderPageModule {}
 
