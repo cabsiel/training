@@ -10,8 +10,6 @@
     }
   },
   "cordova": {
-    "preferences": {
-      "CameraUsesGeolocation": "false"
-    }
+
   }
 }
