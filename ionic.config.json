@@ -1,5 +1,7 @@
 {
   "name": "realHelper",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
