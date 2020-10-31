@@ -9,6 +9,9 @@ export class PhotoService {
 
   public photos: Photo[] = [];
 
+
+
+
   constructor(private camera: Camera, private storage: Storage) { }
 
   takePicture() {
@@ -34,6 +37,11 @@ export class PhotoService {
 
   }
 
+  setPhotos(black: string){
+    this.photos.unshift({
+      data: black
+    });
+  }
   loadSaved() {
     this.storage.get('photos').then((photos) => {
       this.photos = photos || [];
