@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Pagina principal</ion-title>
+    <ion-title translate>page.title</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,14 +12,14 @@
     <ion-fab-button>
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
-    <ion-fab-list >
+    <ion-fab-list  side="bottom" >
       <ion-fab-button><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>
     </ion-fab-list>
-    <ion-fab-list >
-      <ion-fab-button><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>
+    <ion-fab-list  side="bottom">
+      <ion-fab-button><ion-icon name="logo-instagram"></ion-icon></ion-fab-button>
     </ion-fab-list>
-    <ion-fab-list >
-      <ion-fab-button><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>
+    <ion-fab-list  side="bottom">
+      <ion-fab-button><ion-icon name="logo-twitter"></ion-icon></ion-fab-button>
     </ion-fab-list>
   </ion-fab>
   <ion-grid>
@@ -29,7 +29,7 @@
         </ion-col>
     </ion-row>
   </ion-grid>
-  
+
   <ion-fab vertical="bottom" horizontal="center" slot="fixed">
       <ion-fab-button (click)="photoService.takePicture()">
         <ion-icon name="camera"></ion-icon>

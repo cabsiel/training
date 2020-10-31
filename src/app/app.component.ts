@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -11,52 +12,58 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 export class AppComponent {
 
   public selectedIndex = 0;
-  public appPages = [
+  public toolsMenu = [
     {
-      title: 'Inbox',
-      url: '/folder/Inbox',
-      icon: 'mail'
+      title: 'home.menu.entry1',
+      value: 'es'
     },
     {
-      title: 'Outbox',
-      url: '/folder/Outbox',
-      icon: 'paper-plane'
+      title: 'home.menu.entry2',
+      value: 'ca'
     },
     {
-      title: 'Favorites',
-      url: '/folder/Favorites',
-      icon: 'heart'
-    },
-    {
-      title: 'Archived',
-      url: '/folder/Archived',
-      icon: 'archive'
-    },
-    {
-      title: 'Trash',
-      url: '/folder/Trash',
-      icon: 'trash'
-    },
-    {
-      title: 'Spam',
-      url: '/folder/Spam',
-      icon: 'warning'
+      title: 'home.menu.entry3',
+      value: 'en'
     }
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+  public shortcuts = [
+    { 
+      label: 'shortcuts.entry1',
+      icon: 'book',
+      url:'https://es.wikipedia.org/wiki/Realidad_aumentada'
+    },
+    { 
+      label: 'shortcuts.entry2',
+      icon: 'create',
+      url:'https://ionicframework.com/'
+    },
+    { 
+      label: 'shortcuts.entry3',
+      icon: 'glasses',
+      url:'https://blogthinkbig.com/realidad-aumentada-origen'
+    }
+  ];
 
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    private translate: TranslateService
   ) {
     this.initializeApp();
   }
 
   initializeApp() {
     this.platform.ready().then(() => {
+      this.translate.setDefaultLang('es');
       this.statusBar.styleDefault();
+
       this.splashScreen.hide();
     });
   }
+
+  changeLanguage(toolsMenu, index){
+    this.translate.setDefaultLang(toolsMenu.value);
+    this.selectedIndex =index
+}
 }
